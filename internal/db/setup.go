@@ -2,7 +2,7 @@ package db
 
 import (
 	"database/sql"
-	"joynext/downdetector/internal/utils"
+	"example/downdetector/internal/utils"
 
 	"github.com/charmbracelet/log"
 

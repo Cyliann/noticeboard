@@ -3,9 +3,9 @@ package app
 import (
 	"context"
 	"errors"
-	_ "joynext/downdetector/docs"
-	"joynext/downdetector/internal/db"
-	"joynext/downdetector/internal/utils"
+	_ "example/downdetector/docs"
+	"example/downdetector/internal/db"
+	"example/downdetector/internal/utils"
 
 	"net/http"
 	"os"
@@ -15,7 +15,7 @@ import (
 
 	"github.com/MadAppGang/httplog"
 	"github.com/charmbracelet/log"
-	httpSwagger "github.com/swaggo/http-swagger/v2"
+	"github.com/swaggo/http-swagger"
 )
 
 // SetupServer sets up the HTTP server and routes.
@@ -25,7 +25,7 @@ func SetupServer() *http.Server {
 	http.Handle("GET /static/", http.StripPrefix("/static/", fs))
 
 	// Serve swagger documentation under /docs/
-	http.Handle("GET /docs/*", httpSwagger.WrapHandler)
+	http.Handle("GET /docs/", httpSwagger.WrapHandler)
 
 	// Set up static endpoint
 	http.Handle("GET /", httplog.Logger(http.HandlerFunc(RenderOpenReports)))

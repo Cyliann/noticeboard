@@ -1,8 +1,8 @@
 package main
 
 import (
-	"joynext/downdetector/internal/app"
-	"joynext/downdetector/internal/utils"
+	"example/downdetector/internal/app"
+	"example/downdetector/internal/utils"
 
 	"github.com/charmbracelet/log"
 )
@@ -12,7 +12,7 @@ import (
 // @description API for Downdetector website
 
 // @contact.name Maksymilian Cych
-// @contact.email maksymilian.cych@joynext.com
+// @contact.email maksymilian@cych.eu
 
 // @license.name GPLv3
 // @license.url https://www.gnu.org/licenses/gpl-3.0.en.html

@@ -1,7 +1,7 @@
 package db
 
 import (
-	"joynext/downdetector/internal/utils"
+	"example/downdetector/internal/utils"
 
 	"context"
 	"crypto/sha256"

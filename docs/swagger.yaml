@@ -17,7 +17,7 @@ definitions:
     type: object
 info:
   contact:
-    email: maksymilian.cych@joynext.com
+    email: maksymilian@cych.eu
     name: Maksymilian Cych
   description: API for Downdetector website
   title: Downtetector

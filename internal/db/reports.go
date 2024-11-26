@@ -2,8 +2,8 @@ package db
 
 import (
 	"encoding/json"
+	"example/downdetector/internal/utils"
 	"io"
-	"joynext/downdetector/internal/utils"
 	"net/http"
 
 	"github.com/charmbracelet/log"

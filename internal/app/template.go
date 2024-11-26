@@ -1,9 +1,9 @@
 package app
 
 import (
+	"example/downdetector/internal/db"
 	"github.com/charmbracelet/log"
 	"html/template"
-	"joynext/downdetector/internal/db"
 	"net/http"
 	"path/filepath"
 )
