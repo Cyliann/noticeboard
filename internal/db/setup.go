@@ -11,6 +11,7 @@ import (
 
 var DB *sql.DB
 
+// creates a default user with password 'changeme' if users table is empty
 var schema = `
 CREATE TABLE IF NOT EXISTS reports (
   id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
@@ -24,6 +25,10 @@ CREATE TABLE IF NOT EXISTS users (
   password TEXT NOT NULL,
   salt TEXT NOT NULL
 );
+
+INSERT INTO users (username, password, salt)
+SELECT 'admin', '9ca53ef06fbb9b87ddb126147bf346adbf6e79691073b19c5c07bfec1f384b2d', 'salt' 
+WHERE NOT EXISTS (SELECT 1 FROM users);
 `
 
 // Sets up a connection to the database
